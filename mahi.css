@@ -1,0 +1,82 @@
+/*Fundamentals & Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #111827;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+/*Reusable components*/
+.btn {
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #2563EB;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1e4fd4;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #2563EB;
+    border: 1px solid #2563EB;
+}
+
+.btn-outline:hover {
+    background-color: #f4f8fd;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* logo */
+.logo img {
+    height: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #515b68;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #172034;
+}
+
