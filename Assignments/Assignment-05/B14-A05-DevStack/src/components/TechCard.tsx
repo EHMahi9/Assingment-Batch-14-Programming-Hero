@@ -6,40 +6,60 @@ type TechCardProps = {
   isAdded: boolean;
 };
 
-const TechCard = ({ tech, handleAddToStack, isAdded }: TechCardProps) => {
+const TechCard = ({
+  tech,
+  handleAddToStack,
+  isAdded,
+}: TechCardProps) => {
   return (
-    <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
-      
-      <div className="flex justify-between items-center mb-5">
-        <img src={tech.icon} alt={tech.name} className="w-10 h-10 object-contain" />
-        <span className="bg-blue-50 text-blue-500 text-xs font-semibold px-3 py-1 rounded-full">
+    <div className="flex h-full flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+
+      <div className="mb-5 flex items-center justify-between">
+        <img
+          src={tech.icon}
+          alt={tech.name}
+          className="h-10 w-10 object-contain"
+        />
+
+        <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-500">
           {tech.badge}
         </span>
       </div>
 
-      <h3 className="text-lg font-bold text-[#0f172a] mb-2">{tech.name}</h3>
-      <p className="text-sm text-gray-500 mb-6 flex-grow leading-relaxed">{tech.description}</p>
+      <h3 className="mb-2 text-lg font-bold text-[#0f172a]">
+        {tech.name}
+      </h3>
 
-      <div className="flex items-center gap-3 mb-6 border-b border-gray-50 pb-4">
-        <span className="bg-gray-50 text-gray-600 text-xs font-medium px-2 py-1 rounded">{tech.category}</span>
-        <span className="bg-gray-50 text-gray-600 text-xs font-medium px-2 py-1 rounded">{tech.difficulty}</span>
-        <span className="text-gray-800 text-xs font-bold flex items-center ml-auto">
-          <span className="text-yellow-400 mr-1">★</span> {tech.rating}
+      <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-500">
+        {tech.description}
+      </p>
+
+      <div className="mb-6 flex items-center gap-3 border-b border-gray-50 pb-4">
+        <span className="rounded bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600">
+          {tech.category}
+        </span>
+
+        <span className="rounded bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600">
+          {tech.difficulty}
+        </span>
+
+        <span className="ml-auto flex items-center text-xs font-bold text-gray-800">
+          <span className="mr-1 text-yellow-400">★</span>
+          {tech.rating}
         </span>
       </div>
 
-      <button 
+      <button
         onClick={() => handleAddToStack(tech)}
         disabled={isAdded}
-        className={`w-full font-medium py-3 rounded-lg transition-colors text-sm ${
-          isAdded 
-            ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
-            : 'bg-[#0f172a] text-white hover:bg-gray-800'
+        className={`w-full rounded-lg py-3 text-sm font-medium transition-all ${
+          isAdded
+            ? 'cursor-not-allowed bg-gray-100 text-gray-400'
+            : 'bg-brand-gradient text-white hover:shadow-lg'
         }`}
       >
         {isAdded ? '✓ Added to Stack' : 'Add to Stack'}
       </button>
-      
     </div>
   );
 };
