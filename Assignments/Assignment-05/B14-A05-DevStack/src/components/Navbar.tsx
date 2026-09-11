@@ -25,8 +25,8 @@ const Navbar = () => {
               DS
             </div>
 
-            <span className="hidden text-xl font-bold text-brand-gradient sm:block">
-              DevStack
+            <span className="hidden text-xl font-bold text-black sm:block">
+              Dev<span className="text-pink-500">Stack</span>
             </span>
           </a>
 
@@ -82,7 +82,7 @@ const Navbar = () => {
               Sign In
             </button>
 
-            <button className="bg-brand-gradient rounded-full px-4 py-2 text-xs font-medium text-white transition-all hover:shadow-lg sm:px-6 sm:py-2.5 sm:text-sm">
+            <button className="rounded-full bg-pink-500 px-4 py-2 text-xs font-medium text-white transition-all hover:bg-pink-600 hover:shadow-lg sm:px-6 sm:py-2.5 sm:text-sm">
               Sign Up
             </button>
           </div>

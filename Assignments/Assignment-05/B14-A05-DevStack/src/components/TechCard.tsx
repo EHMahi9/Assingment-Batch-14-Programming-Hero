@@ -55,7 +55,7 @@ const TechCard = ({
         className={`w-full rounded-lg py-3 text-sm font-medium transition-all ${
           isAdded
             ? 'cursor-not-allowed bg-gray-100 text-gray-400'
-            : 'bg-brand-gradient text-white hover:shadow-lg'
+            : 'bg-black text-white hover:bg-gray-800 hover:shadow-lg'
         }`}
       >
         {isAdded ? '✓ Added to Stack' : 'Add to Stack'}
