@@ -34,17 +34,17 @@ const TechCard = ({
         {tech.description}
       </p>
 
-      <div className="mb-6 flex items-center gap-3 border-b border-gray-50 pb-4">
-        <span className="rounded bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600">
+      <div className="mb-6 flex items-center gap-3 pt-1">
+        <span className="rounded-lg bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">
           {tech.category}
         </span>
 
-        <span className="rounded bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600">
+        <span className="text-xs font-medium text-slate-500">
           {tech.difficulty}
         </span>
 
-        <span className="ml-auto flex items-center text-xs font-bold text-gray-800">
-          <span className="mr-1 text-yellow-400">★</span>
+        <span className="ml-auto flex items-center text-xs font-bold text-slate-700">
+          <span className="mr-1 text-amber-400">★</span>
           {tech.rating}
         </span>
       </div>

@@ -10,8 +10,8 @@ const Footer = () => {
                 DS
               </div>
 
-              <span className="text-xl font-bold text-brand-gradient">
-                DevStack
+              <span className="text-xl font-bold text-black">
+                Dev<span className="text-pink-500">Stack</span>
               </span>
             </div>
 

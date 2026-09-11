@@ -112,9 +112,15 @@ function App() {
           <section id="technologies" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="flex flex-col gap-8 lg:flex-row">
               <div className="lg:w-3/4">
-                <h2 className="mb-8 text-3xl font-bold text-gray-800">
-                  Popular Technologies
-                </h2>
+                <div className="mb-8">
+                  <h2 className="text-3xl font-extrabold text-[#0f172a] md:text-4xl">
+                    Explore the{' '}
+                    <span className="text-brand-gradient">Technologies</span>
+                  </h2>
+                  <p className="mt-2 text-slate-500">
+                    Pick one technology per category to build your ideal stack.
+                  </p>
+                </div>
 
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {techs.map((tech) => {
@@ -136,49 +142,42 @@ function App() {
 
               <div id="projects" className="lg:w-1/4">
                 <div className="sticky top-24 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-                  <h2 className="mb-2 text-2xl font-bold text-gray-800">
+                  <h2 className="mb-1 text-xl font-bold text-[#0f172a]">
                     Your Stack
                   </h2>
 
-                  <p className="mb-6 text-sm text-gray-500">
-                    {stack.length} Technology Selected
+                  <p className="mb-6 text-sm text-slate-400">
+                    {stack.length === 0
+                      ? 'No technologies selected yet.'
+                      : `${stack.length} Technology Selected`}
                   </p>
 
                   {stack.length === 0 ? (
-                    <div className="rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 p-8 text-center">
-                      <span className="mb-3 block text-4xl">📭</span>
-
-                      <p className="font-medium text-gray-500">
+                    <div className="rounded-2xl border border-dashed border-slate-200 py-8 px-4 text-center">
+                      <p className="text-sm font-medium text-slate-400">
                         Your stack is empty.
-                      </p>
-
-                      <p className="mt-2 text-xs text-gray-400">
-                        Add technologies from the list to build your custom
-                        stack.
                       </p>
                     </div>
                   ) : (
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                       {stack.map((item) => (
                         <div
                           key={item.id}
-                          className="flex items-center justify-between rounded-xl border border-gray-100 bg-gray-50 p-3"
+                          className="flex items-center justify-between rounded-xl border border-slate-200/80 bg-white p-3"
                         >
                           <div className="flex min-w-0 items-center gap-3">
-                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-white p-2">
-                              <img
-                                src={item.icon}
-                                alt={item.name}
-                                className="h-full w-full object-contain"
-                              />
-                            </div>
+                            <img
+                              src={item.icon}
+                              alt={item.name}
+                              className="h-8 w-8 shrink-0 object-contain"
+                            />
 
                             <div className="min-w-0">
-                              <h4 className="truncate text-sm font-bold text-gray-800">
+                              <h4 className="truncate text-sm font-bold text-gray-900">
                                 {item.name}
                               </h4>
 
-                              <p className="text-xs text-gray-500">
+                              <p className="text-xs text-slate-400">
                                 {item.category}
                               </p>
                             </div>
@@ -186,18 +185,30 @@ function App() {
 
                           <button
                             onClick={() => handleRemoveFromStack(item.id)}
-                            className="ml-2 flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-bold text-red-500 transition-colors hover:bg-red-100"
+                            className="ml-2 p-1 text-slate-400 transition-colors hover:text-slate-600"
                             title={`Remove ${item.name}`}
                             aria-label={`Remove ${item.name}`}
                           >
-                            ✕
+                            <svg
+                              className="h-4 w-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M6 18L18 6M6 6l12 12"
+                              />
+                            </svg>
                           </button>
                         </div>
                       ))}
 
                       <button
                         onClick={handleClearStack}
-                        className="mt-4 w-full rounded-xl border-2 border-red-500 py-2 font-bold text-red-500 transition-colors hover:bg-red-50"
+                        className="mt-4 w-full rounded-xl border border-red-300 bg-white py-2.5 text-sm font-bold text-red-500 transition-colors hover:bg-red-50"
                       >
                         Remove All
                       </button>

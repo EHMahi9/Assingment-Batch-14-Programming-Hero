@@ -7,26 +7,27 @@ const Hero = () => {
         
         {/* textarea */}
         <div className="flex-1 space-y-6 text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-            Build Your Ultimate <br />
+          <h1 className="text-4xl font-extrabold leading-tight text-gray-900 md:text-6xl">
+            Build Your Ideal <br />
             <span className="text-brand-gradient">Development Stack</span>
           </h1>
           
           <p className="text-lg text-gray-600 md:max-w-lg">
-            Explore, discover, and organize the best technologies for your next big project. 
-            From frontend libraries to powerful databases, build your dream stack today.
+            Explore frontend, backend, database, and tooling options, compare
+            them side by side, and put together the stack that fits your next
+            project.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:justify-start">
             <a
               href="#technologies"
-              className="w-full sm:w-auto bg-brand-gradient text-white px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all text-center inline-block"
+              className="bg-brand-gradient w-full rounded-lg px-6 py-3 text-center font-semibold text-white shadow-sm transition-all hover:shadow-md sm:w-auto"
             >
               Explore Technologies
             </a>
             <a
               href="#about"
-              className="w-full sm:w-auto border-2 border-purple-500 text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-purple-50 transition-all text-center inline-block"
+              className="w-full rounded-lg border border-gray-200 bg-white px-6 py-3 text-center font-semibold text-gray-700 transition-all hover:bg-gray-50 sm:w-auto"
             >
               Learn More
             </a>
