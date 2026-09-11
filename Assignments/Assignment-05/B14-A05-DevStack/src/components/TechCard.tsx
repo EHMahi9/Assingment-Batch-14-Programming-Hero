@@ -51,7 +51,7 @@ const TechCard = ({
 
       <button
         onClick={() => handleAddToStack(tech)}
-        disabled={isAdded}
+        aria-disabled={isAdded}
         className={`w-full rounded-lg py-3 text-sm font-medium transition-all ${
           isAdded
             ? 'cursor-not-allowed bg-gray-100 text-gray-400'
