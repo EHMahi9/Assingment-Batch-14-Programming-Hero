@@ -1,75 +1,42 @@
-# React + TypeScript + Vite
+# Dev Stack Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dev Stack Builder is a responsive React and TypeScript web application that allows developers to explore popular technologies and create their own personalized technology stack.
 
-Currently, two official plugins are available:
+Users can browse technologies loaded dynamically from a JSON file, view important information about each technology, and add or remove technologies from their personal stack.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
 
-## React Compiler
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React-Toastify
+- JSON
+- Git & GitHub
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
 
-## Expanding the ESLint configuration
+### 1. Dynamic Technology Explorer
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Technology information is loaded dynamically from `public/data.json` using the Fetch API. Each technology is displayed in a responsive card with its icon, name, description, category, difficulty, badge, and rating.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 2. Personal Stack Builder
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Users can add technologies to their own stack and remove individual technologies whenever they want. Duplicate technologies cannot be added to the stack, and already-added technologies show an `Added to Stack` state.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 3. Responsive and Interactive UI
 
-```
+The application provides a responsive layout for desktop, tablet, and mobile devices. Interactive actions provide instant feedback using React-Toastify notifications.
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# React Questions & Answers
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 1. What is JSX, and why is it used in React?
 
-```
+JSX stands for JavaScript XML. It allows us to write HTML-like syntax inside JavaScript or TypeScript.
+
+For example:
+
+```tsx
+const element = <h1>Hello World</h1>;
