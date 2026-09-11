@@ -155,3 +155,8 @@ Follow these steps to run DevStack locally:
 ## Live Website
 
 - **Live Deployment:** [https://devstack-mahi.vercel.app](https://devstack-mahi.vercel.app)
+
+## Author
+
+- **Developer:** [EHMahi9](https://github.com/EHMahi9)
+- **Batch:** Programming Hero Web Development Batch 14
