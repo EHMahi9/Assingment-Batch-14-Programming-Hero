@@ -5,3 +5,5 @@ dist/
 *.fig
 *.penpot
 *.fig~
+.vercel
+.env*

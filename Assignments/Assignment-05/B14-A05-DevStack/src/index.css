@@ -1,12 +1,16 @@
 
 
+:root {
+  --brand-gradient: linear-gradient(to right, #f97316, #ec4899, #8b5cf6);
+}
+
 @layer utilities {
   .bg-brand-gradient {
-    background: linear-gradient(to right, #f97316, #ec4899, #8b5cf6) !important;
+    background: var(--brand-gradient) !important;
   }
 
   .text-brand-gradient {
-    background-image: linear-gradient(to right, #f97316, #ec4899, #8b5cf6);
+    background-image: var(--brand-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

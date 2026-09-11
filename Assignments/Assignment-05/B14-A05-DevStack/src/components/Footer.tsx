@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="mt-12 border-t border-gray-100 bg-white pb-8 pt-16">
+    <footer id="contact" className="mt-12 border-t border-gray-100 bg-white pb-8 pt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-5">
 
@@ -22,21 +22,27 @@ const Footer = () => {
 
             <div className="flex gap-4 pt-2 text-sm font-medium text-gray-500">
               <a
-                href="#"
+                href="https://github.com/EHMahi9"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-colors hover:text-pink-500"
               >
                 GitHub
               </a>
 
               <a
-                href="#"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-colors hover:text-pink-500"
               >
                 Twitter
               </a>
 
               <a
-                href="#"
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-colors hover:text-pink-500"
               >
                 LinkedIn

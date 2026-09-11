@@ -18,12 +18,18 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
-            <button className="w-full sm:w-auto bg-brand-gradient text-white px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all">
+            <a
+              href="#technologies"
+              className="w-full sm:w-auto bg-brand-gradient text-white px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all text-center inline-block"
+            >
               Explore Technologies
-            </button>
-            <button className="w-full sm:w-auto border-2 border-purple-500 text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-purple-50 transition-all">
+            </a>
+            <a
+              href="#about"
+              className="w-full sm:w-auto border-2 border-purple-500 text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-purple-50 transition-all text-center inline-block"
+            >
               Learn More
-            </button>
+            </a>
           </div>
         </div>
 

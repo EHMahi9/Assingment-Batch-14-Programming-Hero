@@ -110,7 +110,7 @@ function App() {
         <main>
           <Hero />
 
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <section id="technologies" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="flex flex-col gap-8 lg:flex-row">
               <div className="lg:w-3/4">
                 <h2 className="mb-8 text-3xl font-bold text-gray-800">
@@ -135,7 +135,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="lg:w-1/4">
+              <div id="projects" className="lg:w-1/4">
                 <div className="sticky top-24 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
                   <h2 className="mb-2 text-2xl font-bold text-gray-800">
                     Your Stack
@@ -207,7 +207,7 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           <About />
         </main>
