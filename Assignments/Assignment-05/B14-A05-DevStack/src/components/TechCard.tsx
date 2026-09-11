@@ -6,6 +6,30 @@ type TechCardProps = {
   isAdded: boolean;
 };
 
+const getBadgeClasses = (badge?: string) => {
+  switch (badge) {
+    case 'Popular':
+    case 'Top SQL':
+    case 'Essential':
+    case 'Robust':
+    case 'Containers':
+      return 'bg-blue-50 text-blue-500';
+    case 'Versatile':
+    case 'Standard':
+      return 'bg-emerald-50 text-emerald-600';
+    case 'Fast':
+      return 'bg-orange-50 text-orange-500';
+    case 'Cache':
+      return 'bg-rose-50 text-rose-500';
+    case 'Ubiquitous':
+      return 'bg-amber-50 text-amber-600';
+    case 'Modern':
+      return 'bg-cyan-50 text-cyan-600';
+    default:
+      return 'bg-blue-50 text-blue-500';
+  }
+};
+
 const TechCard = ({
   tech,
   handleAddToStack,
@@ -19,11 +43,22 @@ const TechCard = ({
           src={tech.icon}
           alt={tech.name}
           className="h-10 w-10 object-contain"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = `/icons/${tech.id}.svg`;
+          }}
         />
 
-        <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-500">
-          {tech.badge}
-        </span>
+        {tech.badge ? (
+          <span
+            className={`rounded-full px-3 py-1 text-xs font-semibold ${getBadgeClasses(
+              tech.badge
+            )}`}
+          >
+            {tech.badge}
+          </span>
+        ) : (
+          <span />
+        )}
       </div>
 
       <h3 className="mb-2 text-lg font-bold text-[#0f172a]">

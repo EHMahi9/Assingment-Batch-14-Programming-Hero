@@ -170,6 +170,9 @@ function App() {
                               src={item.icon}
                               alt={item.name}
                               className="h-8 w-8 shrink-0 object-contain"
+                              onError={(e) => {
+                                (e.target as HTMLImageElement).src = `/icons/${item.id}.svg`;
+                              }}
                             />
 
                             <div className="min-w-0">
