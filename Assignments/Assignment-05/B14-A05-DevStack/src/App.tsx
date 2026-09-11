@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import TechCard from './components/TechCard';
 import './App.css';
 import Footer from './components/Footer';
-import About from './components/About';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -208,8 +207,6 @@ function App() {
               </div>
             </div>
           </section>
-
-          <About />
         </main>
       )}
 

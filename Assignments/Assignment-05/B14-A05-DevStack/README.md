@@ -104,7 +104,6 @@ B14-A05-DevStack/
 │   ├── assets/
 │   │   └── banner-stack.png   # Hero section banner illustration
 │   ├── components/
-│   │   ├── About.tsx          # About DevStack section
 │   │   ├── Footer.tsx         # Footer with links and social references
 │   │   ├── Hero.tsx           # Hero banner section with CTA buttons
 │   │   ├── Navbar.tsx         # Responsive navbar with mobile menu
