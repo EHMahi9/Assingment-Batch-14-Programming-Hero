@@ -129,7 +129,7 @@ Follow these steps to run DevStack locally:
 
 2. **Navigate to the project directory:**
    ```bash
-   cd "Assignments/Assignment-05/B14-A05-DevStack"
+   cd "Assignment-05"
    ```
 
 3. **Install dependencies:**
